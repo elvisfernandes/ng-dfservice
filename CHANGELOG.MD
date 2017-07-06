@@ -1,4 +1,7 @@
-0.1.0 (June 28, 2017)
+1.0.1 (July 06, 2017)
+- BugFix: post and delete methods are now more flexible to support requests for login and logout.
+
+1.0.0 (June 28, 2017)
 - Angular 4 compatibility
 - Library name changed from ng2-dfservice to ng-dfservice (you know, Angular team don't want numbers in front of their product's name anymore, let stick to this rule). 
 - NPM package named ng2-dfservice is now deprecated.

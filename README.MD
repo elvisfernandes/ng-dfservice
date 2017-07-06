@@ -153,5 +153,4 @@ Just inject you data store / DFService in your component and use CRUD methods or
 There is a simple boilerplate project with recommendations on how to use this library at [this GitHub repository](https://github.com/elvisfernandes/ng-dfservice-boilerplate)
 
 ## License
-
 MIT © [Elvis Fernandes](http://elvis.eti.br)

@@ -66,9 +66,11 @@ export class DFService {
   }
 
   post( resource:DFResource, dfmodel?:DFModel ) {
+    let reqBody:any = dfmodel ? { resource: [dfmodel.toJSON()] } : resource.body;
+
     return this.http.post(
                     this._base_api + resource.getResourcePath(),
-                    { resource: [dfmodel.toJSON()] },
+                    reqBody,
                     this.requestOptions
                   );
   }
@@ -90,6 +92,8 @@ export class DFService {
   }
 
   delete( resource:DFResource, model?:DFModel ) {
+    let reqBody: any = model ? { resource: [model.id] } : resource.body;
+    
     // Backup x-http-method from defaults, just in case...
     let xhttpmethod = this.requestOptions.headers.get('X-HTTP-METHOD');
 
@@ -98,7 +102,7 @@ export class DFService {
 
     let req_result = this.http.post(
                     this._base_api + resource.getResourcePath(),
-                    { resource: [model.id] },
+                    reqBody,
                     delete_requestOptions
                   );
 
