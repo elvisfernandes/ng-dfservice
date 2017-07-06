@@ -128,7 +128,7 @@ export class DFService {
     this._session_token = token;
     localStorage.setItem( DFService.SESSION_TOKEN_IDENTIFIER, this._session_token );
     
-    if( this._session_token || this._session_token === '') {
+    if( !this._session_token || this._session_token === '') {
       this.requestOptions.headers.delete('X-DreamFactory-Session-Token');
     }
     else {

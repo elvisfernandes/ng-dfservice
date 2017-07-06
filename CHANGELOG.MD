@@ -1,3 +1,6 @@
+1.0.2 (July 06, 2017)
+- BugFix: in certain situations requests hadn't session token included
+
 1.0.1 (July 06, 2017)
 - BugFix: post and delete methods are now more flexible to support requests for login and logout.
 
